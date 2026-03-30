@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  devIndicators: false, // Esto desactiva TODOS los indicadores de desarrollo de un solo golpe
 };
 
 export default nextConfig;
