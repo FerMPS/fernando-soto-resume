@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fernando Soto — Minimalist Portfolio 2026
 
-## Getting Started
+A high-performance, Swiss-style digital portfolio focused on typography, motion, and structural clarity. Designed for a Software Developer and Automation Specialist profile.
 
-First, run the development server:
+## 🎨 The Concept: "Swiss Modernism"
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The aesthetic of this project is rooted in the **International Typographic Style**. The design choices were deliberate to reflect a professional identity in Software Development and Cybersecurity:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* [cite_start]**Typography over Imagery:** By removing distracting images, the focus remains entirely on the content and technical skills[cite: 6].
+* **Asymmetric Grids:** Inspired by Swiss posters, the layout uses a 12-column grid to create a sophisticated, non-traditional flow.
+* [cite_start]**Intentional Contrast:** A deep charcoal palette (`#232323`) contrasted with an aggressive accent Red (`#ff4d4d`) to signal energy and precision[cite: 15].
+* **Micro-animations:** Built with Framer Motion to provide a tactile, high-end feel that demonstrates attention to User Experience (UX).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project serves as a showcase of modern web standards and efficient deployment:
 
-## Learn More
+* **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) for utility-first responsive design.
+* **Motion:** [Framer Motion](https://www.framer.com/motion/) for complex orchestration of entrance and scroll animations.
+* **Typography:** [Mulish](https://fonts.google.com/specimen/Mulish) via `next/font` for optimal performance and variable weight support.
+* **Deployment:** Automated CI/CD via [Vercel](https://vercel.com/).
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Responsive Architecture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project implements a mobile-first approach. [cite_start]It transitions from a monumental "Hero" section on desktop to a condensed, readable stack on mobile devices, ensuring the professional overview is accessible across all platforms[cite: 4, 18].
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
+1.  **Clone the repo:** `git clone https://github.com/FerMPS/fernando-soto-portfolio.git`
+2.  **Install dependencies:** `npm install`
+3.  **Run development server:** `npm run dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Created by [Fernando Manuel Palacios Soto](https://github.com/FerMPS) — 2026*
