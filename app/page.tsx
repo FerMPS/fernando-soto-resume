@@ -1,8 +1,7 @@
-"use client"; // Necesario para las animaciones
+"use client";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  // Variantes de animación para reutilizar
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -21,9 +20,9 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-deep-charcoal font-sans text-soft-grey p-6 md:p-12 lg:p-20 overflow-x-hidden selection:bg-accent selection:text-pure-white">
-      {/* HEADER - Ajustado para ser responsivo */}
-      <header className="absolute top-0 left-0 w-full p-6 md:p-12 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 z-50 uppercase tracking-[0.4em] text-[12px] md:text-[16px]">
+    <main className="min-h-screen bg-deep-charcoal font-sans text-soft-grey px-6 md:px-12 lg:px-20 overflow-x-hidden selection:bg-accent selection:text-pure-white">
+      {/* HEADER */}
+      <header className="absolute top-0 left-0 w-full px-6 md:px-12 lg:px-20 pt-6 md:pt-12 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 z-50 uppercase tracking-[0.4em] text-[12px] md:text-[16px]">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -31,111 +30,94 @@ export default function Home() {
         >
           Fernando Manuel Palacios Soto
         </motion.h1>
+
         <nav className="flex gap-6 md:gap-10">
-          <a
-            href="https://www.linkedin.com/in/fernando-soto-88615b25b"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors duration-300"
-          >
+          <a href="#" className="hover:text-accent transition">
             LinkedIn
           </a>
-          <a
-            href="https://github.com/FerMPS"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors duration-300"
-          >
+          <a href="#" className="hover:text-accent transition">
             GitHub
           </a>
         </nav>
       </header>
 
-      {/* HERO SECTION - Ajustado el tamaño de texto y padding para móvil */}
+      {/* HERO */}
       <section className="min-h-[90vh] flex flex-col justify-center pt-48 md:pt-32">
         <motion.h2
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1 }}
           className="text-4xl sm:text-5xl md:text-[8rem] lg:text-[10rem] leading-[1.1] md:leading-[0.8] text-pure-white uppercase tracking-tighter font-medium"
         >
           Web Developer
           <br />
           <span className="text-accent">& Cybersecurity Enthusiast</span>
         </motion.h2>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.8 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="flex justify-end md:mr-20"
+          className="flex justify-end"
         >
-          <p className="mt-8 md:mt-12 text-base md:text-2xl max-w-2xl font-light tracking-wide leading-relaxed text-right">
+          <p className="mt-8 md:mt-12 text-base md:text-2xl max-w-3xl font-light tracking-wide leading-relaxed text-right">
             IT professional with a background in computer systems, networking,
             and cybersecurity. Experienced in database management, process
-            automation, and web development, currently completing a Bachelor's
-            degree in Computer Science.
+            automation, and web development.
           </p>
         </motion.div>
       </section>
 
-      <div className="mt-40 space-y-60">
-        {/* 01. TRABAJOS */}
+      {/* CONTENT */}
+      <div className="mt-40 space-y-52">
+        {/* WORK */}
         <motion.section
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className="border-t border-soft-grey/10 pt-16"
+          className="text-center"
         >
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-            <div className="md:col-span-3">
-              <span className="text-6xl md:text-8xl font-black text-pure-white/5 tracking-tighter leading-none block">
-                01
-              </span>
-              <h3 className="text-xl md:text-2xl uppercase tracking-[0.3em] text-accent mt-[-15px] md:mt-[-20px] ml-4 font-medium">
-                My Work
-              </h3>
-            </div>
-            <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <ProjectCard
-                title="Sectrekk"
-                desc="Modular blog website template."
-                tags={["Laravel", "PHP", "UI/UX"]}
-                variants={fadeIn}
-              />
-              <ProjectCard
-                title="Auto-Messaging"
-                desc="Automated system for medical appointment notifications implemented in Hospital San Juan de Dios."
-                tags={["Automation", "Data"]}
-                variants={fadeIn}
-              />
-              <ProjectCard
-                title="Imprenta UMA"
-                desc="Production management system developed with Google Apps Script."
-                tags={["GAS", "Scripts"]}
-                variants={fadeIn}
-              />
-            </div>
+          <h2 className="text-3xl md:text-5xl font-semibold text-pure-white mb-4">
+            Selected Work
+          </h2>
+
+          <p className="text-soft-grey/60 max-w-2xl mx-auto mb-16">
+            A collection of projects focused on clean design, performance and
+            real-world impact.
+          </p>
+
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-10 lg:gap-14">
+            <ProjectCard
+              title="Sectrekk"
+              desc="Modular blog website template."
+              tags={["Laravel", "PHP", "UI/UX"]}
+            />
+            <ProjectCard
+              title="Auto-Messaging"
+              desc="Medical appointment automation system."
+              tags={["Automation", "Data"]}
+            />
+            <ProjectCard
+              title="Imprenta UMA"
+              desc="Production management system."
+              tags={["GAS", "Scripts"]}
+            />
           </div>
         </motion.section>
 
-        {/* 02. EXPERIENCIA */}
+        {/* EXPERIENCE */}
         <motion.section
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-12 gap-10"
+          className="text-center"
         >
-          <div className="md:col-span-3">
-            <span className="text-6xl md:text-8xl font-black text-pure-white/5 tracking-tighter leading-none block">
-              02
-            </span>
-            <h3 className="text-xl md:text-2xl uppercase tracking-[0.3em] text-accent mt-[-15px] md:mt-[-20px] ml-4 font-medium">
-              Experience
-            </h3>
-          </div>
-          <div className="md:col-span-9 space-y-12">
+          <h2 className="text-3xl md:text-5xl font-semibold text-pure-white mb-16">
+            Experience
+          </h2>
+
+          <div className="flex flex-col gap-6">
+            {" "}
             <ExperienceItem
               company="Hospital San Juan de Dios"
               role="Data Analyst & Automation"
@@ -144,52 +126,44 @@ export default function Home() {
             <ExperienceItem
               company="ITCA-FEPADE"
               role="Adjunct Instructor - Programming & Cybersecurity"
-              period="2023 - 2024"
+              period="2023 — 2024"
             />
             <ExperienceItem
               company="Teleperformance"
               role="Bilingual Customer Service Representative"
-              period="2020 - 2021"
+              period="2020 — 2021"
             />
           </div>
         </motion.section>
 
-        {/* 03. SKILLS */}
+        {/* SKILLS */}
         <motion.section
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="grid grid-cols-1 md:grid-cols-12 gap-10"
+          className="text-center"
         >
-          <div className="md:col-span-3">
-            <span className="text-6xl md:text-8xl font-black text-pure-white/5 tracking-tighter leading-none block">
-              03
-            </span>
-            <h3 className="text-xl md:text-2xl uppercase tracking-[0.3em] text-accent mt-[-15px] md:mt-[-20px] ml-4 font-medium">
-              Skills
-            </h3>
-          </div>
-          <div className="md:col-span-9">
-            <ul className="text-2xl md:text-5xl font-light text-pure-white flex flex-wrap gap-x-8 md:gap-x-12 gap-y-4 md:gap-y-6">
-              {[
-                "C# / ASP.NET",
-                "Java / Spring",
-                "Python",
-                "SQL",
-                "Cybersecurity",
-                "UI Design",
-                "Networking",
-              ].map((item) => (
-                <motion.li
-                  key={item}
-                  whileHover={{ x: 10, color: "#ff4d4d" }}
-                  className="cursor-default"
-                >
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
+          <h2 className="text-3xl md:text-5xl font-semibold text-pure-white mb-16">
+            Skills
+          </h2>
+
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {[
+              "C# / ASP.NET",
+              "Java / Spring",
+              "Python",
+              "SQL",
+              "Cybersecurity",
+              "UI Design",
+              "Networking",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-5 py-2 border border-soft-grey/20 rounded-full text-soft-grey/70 text-sm hover:border-accent/50 hover:text-accent transition"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </motion.section>
       </div>
@@ -201,28 +175,37 @@ export default function Home() {
   );
 }
 
-function ProjectCard({ title, desc, tags, variants }: any) {
+function ProjectCard({ title, desc, tags }: any) {
   return (
     <motion.div
-      variants={variants}
-      whileHover={{ y: -5, borderColor: "rgba(255, 77, 77, 0.3)" }}
-      className="group bg-pure-white/[0.02] p-8 flex flex-col h-full border border-soft-grey/5 transition-colors duration-500"
+      whileHover={{ y: -8 }}
+      className="group relative rounded-2xl bg-white/[0.03] backdrop-blur-sm 
+                 border border-white/10 p-8 flex flex-col 
+                 shadow-[0_10px_30px_rgba(0,0,0,0.3)] 
+                 hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)] 
+                 transition-all duration-100 overflow-hidden"
     >
-      <h4 className="text-xl md:text-2xl font-medium text-pure-white group-hover:text-accent transition-colors">
-        {title}
-      </h4>
-      <p className="text-sm mt-4 text-soft-grey opacity-70 font-light flex-grow">
-        {desc}
-      </p>
-      <div className="mt-6 flex gap-2 flex-wrap">
-        {tags.map((tag: string) => (
-          <span
-            key={tag}
-            className="text-[9px] uppercase tracking-widest text-pure-white/40 border border-pure-white/10 px-2 py-1"
-          >
-            {tag}
-          </span>
-        ))}
+      <div className="relative z-10">
+        <h4 className="text-xl md:text-2xl font-medium text-pure-white group-hover:text-accent transition">
+          {title}
+        </h4>
+
+        <p className="text-sm mt-4 text-soft-grey/70 leading-relaxed flex-grow">
+          {desc}
+        </p>
+
+        <div className="mt-6 flex gap-2 flex-wrap">
+          {tags.map((tag: string) => (
+            <span
+              key={tag}
+              className="text-[10px] uppercase tracking-widest 
+                         text-pure-white/50 border border-white/10 
+                         px-3 py-1 rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
@@ -230,14 +213,27 @@ function ProjectCard({ title, desc, tags, variants }: any) {
 
 function ExperienceItem({ company, role, period }: any) {
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-baseline border-b border-soft-grey/10 pb-6 gap-2">
-      <div>
-        <h4 className="text-xl md:text-2xl font-medium text-pure-white">{company}</h4>
-        <p className="text-xs uppercase tracking-widest opacity-60 mt-1">
+    <div
+      className="flex justify-between items-start gap-6 p-6 rounded-2xl 
+                 bg-white/[0.02] border border-white/10 
+                 shadow-[0_8px_25px_rgba(0,0,0,0.25)] 
+                 hover:shadow-[0_12px_35px_rgba(0,0,0,0.4)] 
+                 transition-all duration-300"
+    >
+      {/* LEFT */}
+      <div className="flex flex-col gap-1">
+        <p className="text-pure-white text-lg">
+          {company}
+        </p>
+        <p className="text-soft-grey/80 text-sm">
           {role}
         </p>
       </div>
-      <span className="text-sm font-light opacity-40 italic sm:not-italic">{period}</span>
+
+      {/* RIGHT */}
+      <span className="text-soft-grey/40 text-sm whitespace-nowrap">
+        {period}
+      </span>
     </div>
   );
 }
