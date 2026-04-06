@@ -40,7 +40,14 @@ export default function Home() {
               name: "LinkedIn",
               url: "https://www.linkedin.com/in/fernando-soto-88615b25b",
             },
-            { name: "GitHub", url: "https://github.com/FerMPS" },
+            {
+              name: "GitHub",
+              url: "https://github.com/FerMPS",
+            },
+            {
+              name: "Resume",
+              url: "/docs/fscv26_En.pdf",
+            },
           ].map((link) => (
             <a
               key={link.name}
@@ -176,9 +183,9 @@ export default function Home() {
               role="Data Analyst & Automation"
               period="2025"
               tasks={[
-                "Process automation using custom scripts.",
-                "Analysis of large volumes of hospital data for resource optimization.",
-                "Maintenance of critical databases.",
+                "Data entry and management, accurate digitization of records in database.",
+                "Development and implementation of an automated messaging system for appointment notifications.",
+                "Generation of weekly reports to track key metrics and improve operational efficiency.",
               ]}
             />
             <ExperienceItem
@@ -186,9 +193,8 @@ export default function Home() {
               role="Adjunct Instructor"
               period="2023 — 2024"
               tasks={[
-                "Instruction in programming fundamentals and development logic.",
-                "Practical workshops on Cybersecurity and best practices in networking.",
-                "Evaluation of final projects based on secure architectures.",
+                "Delivered technical instruction in Programming Logic, Server Installation and Maintenance, Cybersecurity, and Electronics",
+                "Designed course syllabi and instructional materials, and supported faculty development by training colleagues in the integration of technology into teaching practices.",
               ]}
             />
             <ExperienceItem
@@ -196,9 +202,7 @@ export default function Home() {
               role="Bilingual CSR"
               period="2020 — 2021"
               tasks={[
-                "Advanced technical support in a bilingual environment (ES/EN).",
-                "Resolution of network and connectivity issues for remote users.",
-                "Real-time management of technical documentation.",
+                "Provided bilingual customer support for an internet and telecommunications services account.",
               ]}
             />
           </div>
