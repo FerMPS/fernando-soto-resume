@@ -9,8 +9,8 @@ const mulish = Mulish({
 });
 
 export const metadata: Metadata = {
-  title: "Fernando Soto | CV",
-  description: "Portafolio profesional de Fernando Soto",
+  title: "Fernando Soto",
+  description: "Fernando Soto professional portfolio",
 };
 
 export default function RootLayout({

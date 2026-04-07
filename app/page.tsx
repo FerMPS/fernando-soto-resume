@@ -295,18 +295,18 @@ function ProjectCard({ title, desc, tags, imageUrl }: any) {
           {tags.map((tag: string) => (
             <span
               key={tag}
-              className="text-[9px] uppercase tracking-[0.3em] text-soft-grey/50 font-medium"
+              className="text-[11px] uppercase tracking-[0.3em] text-soft-grey/50 font-medium"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <h4 className="text-4xl text-pure-white mb-3 group-hover:text-accent transition-colors duration-300">
+        <h4 className="text-5xl tracking-tighter text-pure-white mb-3 group-hover:text-accent transition-colors duration-300">
           {title}
         </h4>
 
-        <p className="text-soft-grey/60 text-sm leading-relaxed max-w-[90%] opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+        <p className="text-soft-grey text-lg leading-relaxed max-w-[90%] opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500">
           {desc}
         </p>
 
